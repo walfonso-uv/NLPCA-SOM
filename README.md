@@ -9,4 +9,5 @@ The advantages of NLPCA and SOM are three points:
 -	SOM is an artificial neural network useful for the classification and identification of homogeneous climate zones.
 -	The combination of NLPCA and SOM is an efficient approach for the classification of monthly rainfall in southwestern Colombia.
 
-<img src="figures/SOM.png" style="width:800px;height:500px;"><caption><center><b> Figure 1</b> </center></caption><br>
+<p align='center'><img src="figures/SOM.png" style="width:800px;height:500px;"></p>
+<p align='center'><caption><b> Figure 1</b> </caption></p>
