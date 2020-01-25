@@ -38,10 +38,10 @@ Follow the next instructions to get similar results as we present in [Paper].
 
 ### Requirements
 First, run **Requirements.m** to check if your MatLab version is compatible to run scripts and functions. Verify using this script or doing the next checklist:
-- [ ] MatLab realease 2015b
-- [ ] Neural Network Toolbox
+- [x] MatLab realease 2015b
+- [x] Neural Network Toolbox
 
 If you run the script a message dialog will appear to inform if your version is compatible or not.
 
 ## Main_Script
-This is the main script where, it is possible to reply the results from the manuscript [Paper].
+This is the main script where, it is possible to reply the results from the manuscript [Paper]. CLick <a href='Main_Script'>here</a> to check the full script.
