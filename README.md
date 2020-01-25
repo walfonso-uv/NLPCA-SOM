@@ -20,7 +20,7 @@ The methodology proposed in this study was developed according to the flowchart 
 <p align='center'><caption><b> Figure 2. Flowchart of methodology</b> </caption></p>
 
 ### Non-Linear principal component analysis (NLPCA) 
-NLPCA operates by training a feed-forward neural network to perform the identity mapping, where the network inputs are reproduced at the output layer. The network contains an internal "bottleneck" layer that allows generating a compact representation of the input data. This technique successfully reduces the dimensionality and create a feature space map similar to the actual distribution of the underlying system parameters [37]. The scheme of NLPCA is shown in <a href='#nlpca'>Fig. 3</a>. In this, the dimensions of x and h(x) are n and m, respectively, where x is the input column vector of length n, and m is the number of hidden neurons in the encoding and decoding layers for u. The neurons u is calculated from a linear combination of hidden neurons <img src="https://render.githubusercontent.com/render/math?math=h_k^{(x)}">. A second transfer function <img src="https://render.githubusercontent.com/render/math?math=\phi_{2}"> maps the encoding layer to the bottleneck layer containing a single neuron.
+NLPCA operates by training a feed-forward neural network to perform the identity mapping, where the network inputs are reproduced at the output layer. The network contains an internal "bottleneck" layer that allows generating a compact representation of the input data. This technique successfully reduces the dimensionality and create a feature space map similar to the actual distribution of the underlying system parameters [37]. The scheme of NLPCA is shown in <a href='#nlpca'>Fig. 3</a>. In this, the dimensions of <img src="https://render.githubusercontent.com/render/math?math=x"> and <img src="https://render.githubusercontent.com/render/math?math=h(x)"> are <img src="https://render.githubusercontent.com/render/math?math=n"> and <img src="https://render.githubusercontent.com/render/math?math=m">, respectively, where <img src="https://render.githubusercontent.com/render/math?math=x"> is the input column vector of length <img src="https://render.githubusercontent.com/render/math?math=n">, and <img src="https://render.githubusercontent.com/render/math?math=m"> is the number of hidden neurons in the encoding and decoding layers for <img src="https://render.githubusercontent.com/render/math?math=u">. The neurons <img src="https://render.githubusercontent.com/render/math?math=u"> is calculated from a linear combination of hidden neurons <img src="https://render.githubusercontent.com/render/math?math=h_k^{(x)}">. A second transfer function <img src="https://render.githubusercontent.com/render/math?math=\phi_{2}"> maps the encoding layer to the bottleneck layer containing a single neuron.
 <p align='center'><img id='nlpca' src='figures/NLPCA.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 3. NN Model for calculating NLPCA</b> </caption></p>
 In this study, the input data were 44-gauge stations with temporal series of 408 months (34 years), NLPCA was used to reduce the temporal dimensionality of the dataset to five NLPC’s using a network with a [408-200-25-5] topology. In Appendix A, we provide the code in Matlab and a brief explanation of the basic steps that are necessary to generate the reduction of dimensions (five NLPC’s) of the monthly rainfall dataset. 
@@ -33,3 +33,15 @@ Five NLPC’s coefficients were estimated to represent the dimension reduction i
 ### Method validation
 The validation of the regions identified in the cluster analysis with NLPCA and SOM was performed through heterogeneity measure (H) developed by Hosking and Wallis [44], where <img src="https://render.githubusercontent.com/render/math?math=H < 1">, indicates the region is considered "acceptably homogeneous"; <img src="https://render.githubusercontent.com/render/math?math=1 < H < 2"> indicates the region is claimed "possibly heterogeneous"; and region with <img src="https://render.githubusercontent.com/render/math?math=H > 2"> is "definitely heterogeneous". Furthermore, a spatial validation was performed, verifying the spatial coherence of each gauge station classified in each cluster, to finally analyze the seasonality of monthly rainfall in southwestern Colombia (Nariño).
 
+## MatLab Files
+Follow the next instructions to get similar results as we present in [Paper].
+
+### Requirements
+First, run **Requirements.m** to check if your MatLab version is compatible to run scripts and functions. Verify using this script or doing the next checklist:
+- [ ] MatLab realease 2015b
+- [ ] Neural Network Toolbox
+
+If you run the script a message dialog will appear to inform if your version is compatible or not.
+
+## Main_Script
+This is the main script where, it is possible to reply the results from the manuscript [Paper].
