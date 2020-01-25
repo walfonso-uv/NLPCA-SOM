@@ -18,3 +18,8 @@ The dataset of monthly rainfall used in this study was obtained from 44-gauge st
 The methodology proposed in this study was developed according to the flowchart presented in <a href='#Method'>Fig. 2</a>. The regionalization of monthly rainfall was performed using two nonlinear techniques: NLPCA and SOM. NLPCA was used to reduce the dimensionality of the dataset, and SOM to identify regions with homogeneous rainfall.
 <p align='center'><img id='Method' src='figures/Methodology.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 2. Flowchart of methodology</b> </caption></p>
+
+### Non-Linear principal component analysis (NLPCA) 
+NLPCA operates by training a feed-forward neural network to perform the identity mapping, where the network inputs are reproduced at the output layer. The network contains an internal "bottleneck" layer that allows generating a compact representation of the input data. This technique successfully reduces the dimensionality and create a feature space map similar to the actual distribution of the underlying system parameters [37]. The scheme of NLPCA is shown in <a href='#nlpca'>Fig. 3</a>. In this, the dimensions of x y h(x) are n and m, respectively, where x is the input column vector of length n, and m is the number of hidden neurons in the encoding and decoding layers for u. The neurons u is calculated from a linear combination of hidden neurons h_k^((x)). A second transfer function ϕ_2 maps the encoding layer to the bottleneck layer containing a single neuron.
+<p align='center'><img id='nlpca' src='figures/NLPCA.png' style='width:600px'></p>
+<p align='center'><caption><b> Figure 3. NN Model for calculating NLPCA</b> </caption></p>
