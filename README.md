@@ -10,7 +10,11 @@ The advantages of NLPCA and SOM are three points:
 -	The combination of NLPCA and SOM is an efficient approach for the classification of monthly rainfall in southwestern Colombia.
 
 ## Data
-The dataset of monthly rainfall used in this study was obtained from 44-gauge stations located in different zones in the Southwestern Colombia (Nariño) (Fig. 1), available in Canchala et al [1]. The time series analyzed covers 34 years of observation between 1983 and 2016.
-
-<p align='center'><img src="figures/GeographicLocation" style="width:800px"></p>
+The dataset of monthly rainfall used in this study was obtained from 44-gauge stations located in different zones in the Southwestern Colombia (Nariño) (<a href='#GeoLo'>Fig. 1</a>), available in Canchala et al [1]. The time series analyzed covers 34 years of observation between 1983 and 2016.
+<p align='center'><img id='GeoLo' src='figures/GeographicLocation.png' style='width:800px'></p>
 <p align='center'><caption><b> Figure 1. Geographic location of the study area and distribution of rainfall stations</b> </caption></p>
+
+## Method
+The methodology proposed in this study was developed according to the flowchart presented in <a href='#Method'>Fig. 2</a>. The regionalization of monthly rainfall was performed using two nonlinear techniques: NLPCA and SOM. NLPCA was used to reduce the dimensionality of the dataset, and SOM to identify regions with homogeneous rainfall.
+<p align='center'><img id='Method' src='figures/Methodology.png' style='width:600px'></p>
+<p align='center'><caption><b> Figure 2. Flowchart of methodology</b> </caption></p>
