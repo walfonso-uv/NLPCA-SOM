@@ -60,4 +60,8 @@ When all encoders are trained, then they are stacked in just one architecture, w
 <p align='center'><caption><b> Figure 8. Encoder [408-200-25-5] </b> </caption></p>
 The script also include a function called <a href='SOM_ClusterDefinition.m'><b>SOM_ClusterDefinition.m</b></a> to draw the result of the SOM with different colors if clusters are found. Threshold value defines how split neurons based on the intra-cluster distance; if inactive neurons are found between groups of active neurons, and they help to define an isolated group then a cluster could be defined.
 
-## Paper_result
+## Paper_Result.m
+This script call the values saved to show in [Paper]. It calls the trained data from **example** folder; data are the result from NLPCA training using [408-200-25-5] encoder topology. Fig. 9 shows the results from trained data.
+<p align='center'><img id='result' src='/figures/PaperResult.png' style='width:600px'></p>
+<p align='center'><caption><b> Figure 9. Classification result based on saved information </b> </caption></p>
+
