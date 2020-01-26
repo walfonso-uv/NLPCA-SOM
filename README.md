@@ -65,6 +65,18 @@ The script also include a function called <a href='SOM_ClusterDefinition.m'><b>S
 <a href='Paper_Result.m'><b>Paper_Result.m</b></a> calls the values saved to show in [Paper]. It calls the trained data from **example** folder; data are the result from NLPCA training using [408-200-25-5] encoder topology. <a href='#result'>Fig. 9</a> shows the results from trained data.
 <p align='center'><img id='result' src='/figures/PaperResult.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 9. Classification result based on saved information </b> </caption></p>
+To demonstrate whether proposed regions in the cluster analysis can be accepted as homogeneous features, a heterogeneity test developed by Hosking and Wallis [44] was used. The results of heterogeneity tests show that AR and PR are "acceptably homogeneous", with H<1 (see <a href='#table01'>Table 1</a>) allowing to confirm that both clusters are considered as homogeneous regions.
+
+<p align='center'><caption id='table01'><b> Table 1. Results of heterogeneity test for the two clusters obtained by the SOM. </b> </caption></p>
+
+|Cluster	| Number of gauges	| Gauge stations	| Heterogeneity Measure H |
+| :---: | :---: | --- | :---: |
+| AR	| 33	| VER, BOM, BOT, BUE, CHI, CUM, PAR, PEÑ, GCH, GMT, HID, IMU, JUN, GCA, UNI, MAM, NAR, OBO, PIS, PUE, RBB, RMO, SAM, SBO, SAN, TAM, TAN, TGA, CRU, ASL, AAN, APO, VER.	| -0,86 |
+| PR	| 11	| BAR, MIR, CHA, MAT, MOS, REM, SAL, JOS, MAG, GYA, COC	| 0,21 |
+
+Finally, the results were validated verifying the geographic coherence of the location of the 44 gauge stations in the department of Nariño, as shown in <a href='RegionalizationResult'>Fig. 10</a>. The spatial location makes it possible to verify that the 33 gauge stations of the AR are located over the mountain range (Colombian massif) and that the 11 gauge stations of PR are located over the Nariño coast (Colombian Chocó biogeographic).
+<p align='center'><img id='RegionalizationResult' src='/figures/RegionalizationResult.png' style='width:600px'></p>
+<p align='center'><caption><b> Figure 10. Regionalization of monthly rainfall in Nariño using CPNL and SOM </b> </caption></p>
 
 ## References
 
