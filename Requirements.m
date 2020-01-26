@@ -11,4 +11,5 @@ if flag && str2double(aux(1:end-1))>=2015 && double(aux(end))>=double('a')
 else
     warndlg('Maybe you need to update your MatLab version',...
         'Warning');
+    flag = 0;
 end
