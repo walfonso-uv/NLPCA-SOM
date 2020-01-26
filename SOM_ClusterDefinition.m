@@ -1,7 +1,17 @@
-function SOM_ClusterDefinition(net,P,Value)
+function TagName = SOM_ClusterDefinition(net,P,Value)
 % Define the number of cluster based on threshold value which is determined
 % by the user. If 'Value' (segregation value) is not defined, the default
 % is 1.
+% 
+% TagName = SOM_ClusterDefinition(net,P,Value)
+% 
+% where net is the neural network trained using selforgmap function, P are
+% the patterns, and Value is the threshold to split clusters.
+% 
+% TagName is the name added per cluster based on the threshold value. Each
+% data is labeled with tags like: 'Cluster #1', 'Cluster #2', and so on; if
+% a neuron does not have any data associated then it is labeled as
+% 'Inactive Neurons'.
 
 if (nargin<3)
     Value = 1;
@@ -36,7 +46,18 @@ Colors(R(:,1)==true,2) = rand(1);
 Colors(R(:,1)==true,3) = rand(1);
 
 aux04 = single(R(:,1));
-Num = 1:net.layers{1}.size;
+Num   = 1:net.layers{1}.size;
+Vec   = Num(aux04==1);
+numCl = 0;
+
+if aux02(Vec(1))~=0
+    numCl = numCl+1;
+    TagName(R(:,Vec(1))) = {strcat('Cluster #',num2str(numCl))};
+    ClusterColor(numCl,:) = Colors(Vec(1),:);
+else
+    TagName(R(:,Vec(1))) = {'Inactive Neurons'};
+    InactiveColor(1,:) = Colors(Vec(1),:);
+end
 
 while sum(aux04)<net.layers{1}.size
     Vec = Num(aux04==0);
@@ -44,6 +65,14 @@ while sum(aux04)<net.layers{1}.size
     Colors(R(:,Vec(1))==true,2) = rand(1);
     Colors(R(:,Vec(1))==true,3) = rand(1);
     aux04(R(:,Vec(1))==true) = 1;
+    if aux02(Vec(1))~=0
+        numCl = numCl+1;
+        TagName(R(:,Vec(1))) = {strcat('Cluster #',num2str(numCl))};
+        ClusterColor(numCl,:) = Colors(Vec(1),:);
+    else
+        TagName(R(:,Vec(1))) = {'Inactive Neurons'};
+        InactiveColor(1,:) = Colors(Vec(1),:);
+    end
 end
 
 numNeurons = net.layers{1}.size;
@@ -72,7 +101,7 @@ a = axes;
 set(a,'dataaspectratio',[1 1 1],'box','on','color',[1 1 1])
 hold on
 patches = zeros(1,numNeurons);
-texto = zeros(1,numNeurons);
+text_out = zeros(1,numNeurons);
 for i=1:numNeurons
     fill(pos(1,i)+shapex,pos(2,i)+shapey,[1 1 1],...
         'EdgeColor',[1 1 1]*0.8,'FaceColor',[1 1 1]*0.5);
@@ -84,7 +113,7 @@ for i=1:numNeurons
 end
 
 for i=1:numNeurons
-    texto(i) = text(pos(1,i),pos(2,i),'',...
+    text_out(i) = text(pos(1,i),pos(2,i),'',...
         'HorizontalAlignment','center','VerticalAlignment','middle',...
         'FontWeight','bold','color',[1 1 1],'FontSize',9);
 end
@@ -94,3 +123,7 @@ set(a,'ylim',[-1 (dim2-0.5)*dy + 0.5]);
 title(a,'Hits');
 set(gcf,'Name','Classification Result');
 set(a,'Visible','off');
+
+[Tags, idx] = unique(TagName);
+legend(patches(idx),Tags,'Location','southoutside','Orientation',...
+    'horizontal','Color','none','EdgeColor','none');
