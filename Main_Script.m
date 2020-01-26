@@ -99,4 +99,4 @@ net = selforgmap([5 5]);
 net = train(net,P);
 
 %% Visualizating the Results
-SOM_ClusterDefinition(net,P);
+ClusNameData = SOM_ClusterDefinition(net,P,0.61);
