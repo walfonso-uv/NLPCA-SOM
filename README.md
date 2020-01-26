@@ -37,22 +37,23 @@ The validation of the regions identified in the cluster analysis with NLPCA and 
 Follow the next instructions to get similar results as we present in [Paper].
 
 ### Requirements
-First, run **Requirements.m** to check if your MatLab version is compatible to run scripts and functions. Verify using this script or doing the next checklist:
+First, run <a href='Requirements.m'><b>Requirements.m</b></a> to check if your MatLab version is compatible to run scripts and functions. Verify using this script or doing the next checklist:
 - [x] MatLab realease 2015b
 - [x] Neural Network Toolbox
 
-If you run the script a message dialog will appear to inform if your version is compatible or not.
+If you run the script a message dialog will appear to inform if your version is compatible or not (Check flag value, if this is zero then the Main_Script.m will not work).
 
 ### Main_Script
-This is the main script where, it is possible to reply the results from the manuscript [Paper]. CLick <a href='Main_Script.m'>here</a> to check the full script.
+This is the main script where, it is possible to reply the results from the manuscript [Paper]. Click <a href='Main_Script.m'>here</a> to check the full script.
 We develop an autoenconder using a network with a [408-200-25-5] topology. Were 408 is the number of inputs (series time for each gauge station), after is reduced layer by layer until it achieves only five outputs. The main idea is verify that per each training stage the performance is well reduced to thrust in the model.
-If you execute step by step the **Main_Script.m** some views are presented in <a href='#enc01'>Fig. 5</a>, <a href='#enc02'>Fig. 6</a>, and <a href='#enc03'>Fig. 7</a>.
+If you execute step by step the <a href='Main_Script.m'><b>Main_Script.m</b></a> some views are presented in <a href='#enc01'>Fig. 5</a>, <a href='#enc02'>Fig. 6</a>, and <a href='#enc03'>Fig. 7</a>.
 <p align='center'><img id='enc01' src='/figures/Encode01.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 5. First stage to train an autoenconder [408-200-408] </b> </caption></p>
 <p align='center'><img id='enc02' src='/figures/Encode02.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 6. Second stage to train an autoenconder [200-25-200] </b> </caption></p>
 <p align='center'><img id='enc03' src='/figures/Encode03.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 7. Third stage to train an autoenconder [25-5-25] </b> </caption></p>
-When all encoders are trained, then they are stacked in just one architecture, which is used to generate five non-linear principal components. These are finally used to create a Self-Organizing Map to verify if these components represent well defined clusters for the classification of monthly rainfall in southwestern Colombia. One of the possible results after generating several SOM training is presented in <a href='#fullenc'>Fig. 8</a>.
+When all encoders are trained, then they are stacked in just one architecture, which is used to generate five non-linear principal components. These are finally used to create a Self-Organizing Map (SOM) to verify if these components represent well defined clusters for the classification of monthly rainfall in southwestern Colombia. One of the possible results after generating several SOM training is presented in <a href='#fullenc'>Fig. 8</a>.
 <p align='center'><img id='fullenc' src='/figures/FullEncoder.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 8. Encoder [408-200-25-5] </b> </caption></p>
+The script also include a function called <a href='SOM_ClusterDefinition.m'><b>SOM_ClusterDefinition.m</b></a> to draw the result of the SOM with different colors if clusters are found. Threshold value defines how split neurons based on the intra-cluster distance; if inactive neurons are found between groups of active neurons, and they help to define an isolated group then a cluster could be defined.
