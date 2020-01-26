@@ -1,6 +1,7 @@
 # NLPCA-SOM
 Clustering using Self-Organizing Maps through Non-Linear Principal Components Analysis - Rainfalls in Southwestern Colombia.
-This **github** is part of the article titled: **"Regionalization of monthly rainfall in southwestern Colombia using neural networks."** If you use these codes please refer this as:
+
+This **github** is part of the article titled: **"Regionalization of monthly rainfall in southwestern Colombia using neural networks."** If you use these codes please refer as:
 - Canchala, Teresita; Carvajal-Escobar, Yesid; Alfonso-Morales, Wilfredo; Loaiza, Wilmar; Caicedo, Eduardo; Regionalization of monthly rainfall in southwestern Colombia using neural networks." MethodsX. 2020.
 
 ## Abstract
@@ -60,8 +61,12 @@ When all encoders are trained, then they are stacked in just one architecture, w
 <p align='center'><caption><b> Figure 8. Encoder [408-200-25-5] </b> </caption></p>
 The script also include a function called <a href='SOM_ClusterDefinition.m'><b>SOM_ClusterDefinition.m</b></a> to draw the result of the SOM with different colors if clusters are found. Threshold value defines how split neurons based on the intra-cluster distance; if inactive neurons are found between groups of active neurons, and they help to define an isolated group then a cluster could be defined.
 
-## Paper_Result.m
-This script call the values saved to show in [Paper]. It calls the trained data from **example** folder; data are the result from NLPCA training using [408-200-25-5] encoder topology. Fig. 9 shows the results from trained data.
+### Paper_Result.m
+<a href='Paper_Result.m'><b>Paper_Result.m</b></a> calls the values saved to show in [Paper]. It calls the trained data from **example** folder; data are the result from NLPCA training using [408-200-25-5] encoder topology. <a href='#result'>Fig. 9</a> shows the results from trained data.
 <p align='center'><img id='result' src='/figures/PaperResult.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 9. Classification result based on saved information </b> </caption></p>
 
+## References
+
+- [1] Canchala, Teresita; Carvajal-Escobar, Yesid; Alfonso-Morales, Wilfredo; Loaiza, Wilmar; Caicedo, Eduardo; Regionalization of monthly rainfall in southwestern Colombia using neural networks." MethodsX. 2020.
+- [2] Canchala, Teresita; Carvajal, Yesid; Alfonso, Wilfredo; Loaiza, Wilmar; Caicedo, Eduardo F.; "Estimation of missing data of monthly rainfall in southwestern Colombia using artificial neural networks."  Data in Brief. September 2019.
