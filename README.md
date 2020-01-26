@@ -1,5 +1,7 @@
 # NLPCA-SOM
-Clustering using Self-Organizing Maps through Non-Linear Principal Components Analysis - Rainfalls in Southwestern Colombia
+Clustering using Self-Organizing Maps through Non-Linear Principal Components Analysis - Rainfalls in Southwestern Colombia.
+This **github** is part of the article titled: **"Regionalization of monthly rainfall in southwestern Colombia using neural networks."** If you use these codes please refer this as:
+- Canchala, Teresita; Carvajal-Escobar, Yesid; Alfonso-Morales, Wilfredo; Loaiza, Wilmar; Caicedo, Eduardo; Regionalization of monthly rainfall in southwestern Colombia using neural networks." MethodsX. 2020.
 
 ## Abstract
 
@@ -57,3 +59,5 @@ When all encoders are trained, then they are stacked in just one architecture, w
 <p align='center'><img id='fullenc' src='/figures/FullEncoder.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 8. Encoder [408-200-25-5] </b> </caption></p>
 The script also include a function called <a href='SOM_ClusterDefinition.m'><b>SOM_ClusterDefinition.m</b></a> to draw the result of the SOM with different colors if clusters are found. Threshold value defines how split neurons based on the intra-cluster distance; if inactive neurons are found between groups of active neurons, and they help to define an isolated group then a cluster could be defined.
+
+## Paper_result
