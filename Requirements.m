@@ -1,4 +1,4 @@
-%% Requirements
+%% Requirements %%
 % Requirements.m checks if you have the toolbox to use this code. The
 % scripts and functions work is you are using MatLab version 2015b or
 % higher.
