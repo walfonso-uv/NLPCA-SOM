@@ -1,7 +1,7 @@
 # NLPCA-SOM
 Clustering using Self-Organizing Maps through Non-Linear Principal Components Analysis - Rainfalls in Southwestern Colombia.
 
-This **github** is part of the article titled: **"Regionalization of monthly rainfall in southwestern Colombia using neural networks"** (See [1](#1)). If you use these codes please refer as:
+This **github** is part of the article titled: **"Regionalization of monthly rainfall in southwestern Colombia using neural networks"** (See [[1]](#1)). If you use these codes please refer as:
 - Canchala, Teresita; Carvajal-Escobar, Yesid; Alfonso-Morales, Wilfredo; Loaiza, Wilmar; Caicedo, Eduardo; Regionalization of monthly rainfall in southwestern Colombia using neural networks." MethodsX. 2020.
 
 ## Abstract
@@ -13,7 +13,7 @@ The advantages of NLPCA and SOM are three points:
 -	The combination of NLPCA and SOM is an efficient approach for the classification of monthly rainfall in southwestern Colombia.
 
 ## Data
-The dataset of monthly rainfall used in this study was obtained from 44-gauge stations located in different zones in the Southwestern Colombia (Nariño) (<a href='#GeoLo'>Fig. 1</a>), available in Canchala et al [2](#2). The time series analyzed covers 34 years of observation between 1983 and 2016.
+The dataset of monthly rainfall used in this study was obtained from 44-gauge stations located in different zones in the Southwestern Colombia (Nariño) (<a href='#GeoLo'>Fig. 1</a>), available in Canchala et al. [[2]](#2). The time series analyzed covers 34 years of observation between 1983 and 2016.
 <p align='center'><img id='GeoLo' src='figures/GeographicLocation.png' style='width:800px'></p>
 <p align='center'><caption><b> Figure 1. Geographic location of the study area and distribution of rainfall stations</b> </caption></p>
 
@@ -33,8 +33,8 @@ Five NLPC’s coefficients were estimated to represent the dimension reduction i
 <p align='center'><img id='som' src='figures/SOM.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 4. SOM two-level architecture</b> </caption></p>
 
-[comment]: <> (### Method validation)
-[comment]: <> (The validation of the regions identified in the cluster analysis with NLPCA and SOM was performed through heterogeneity measure (H) developed by Hosking and Wallis [44], where <img src="https://render.githubusercontent.com/render/math?math=H < 1">, indicates the region is considered "acceptably homogeneous"; <img src="https://render.githubusercontent.com/render/math?math=1 < H < 2"> indicates the region is claimed "possibly heterogeneous"; and region with <img src="https://render.githubusercontent.com/render/math?math=H > 2"> is "definitely heterogeneous". Furthermore, a spatial validation was performed, verifying the spatial coherence of each gauge station classified in each cluster, to finally analyze the seasonality of monthly rainfall in southwestern Colombia (Nariño).)
+<!-- ### Method validation -->
+<!-- The validation of the regions identified in the cluster analysis with NLPCA and SOM was performed through heterogeneity measure (H) developed by Hosking and Wallis [44], where <img src="https://render.githubusercontent.com/render/math?math=H < 1">, indicates the region is considered "acceptably homogeneous"; <img src="https://render.githubusercontent.com/render/math?math=1 < H < 2"> indicates the region is claimed "possibly heterogeneous"; and region with <img src="https://render.githubusercontent.com/render/math?math=H > 2"> is "definitely heterogeneous". Furthermore, a spatial validation was performed, verifying the spatial coherence of each gauge station classified in each cluster, to finally analyze the seasonality of monthly rainfall in southwestern Colombia (Nariño). -->
 
 ## MatLab Files
 Follow the next instructions to get similar results as we present in [Paper].
@@ -65,15 +65,15 @@ The script also include a function called <a href='SOM_ClusterDefinition.m'><b>S
 <a href='Paper_Result.m'><b>Paper_Result.m</b></a> calls the values saved to show in [Paper]. It calls the trained data from **example** folder; data are the result from NLPCA training using [408-200-25-5] encoder topology. <a href='#result'>Fig. 9</a> shows the results from trained data.
 <p align='center'><img id='result' src='/figures/PaperResult.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 9. Classification result based on saved information </b> </caption></p>
-[comment]: <> (To demonstrate whether proposed regions in the cluster analysis can be accepted as homogeneous features, a heterogeneity test developed by Hosking and Wallis [44] was used. The results of heterogeneity tests show that AR and PR are "acceptably homogeneous", with <img src="https://render.githubusercontent.com/render/math?math=H < 1"> (see <a href='#table01'>Table 1</a>) allowing to confirm that both clusters are considered as homogeneous regions.)
+<!--- To demonstrate whether proposed regions in the cluster analysis can be accepted as homogeneous features, a heterogeneity test developed by Hosking and Wallis [44] was used. The results of heterogeneity tests show that AR and PR are "acceptably homogeneous", with <img src="https://render.githubusercontent.com/render/math?math=H < 1"> (see <a href='#table01'>Table 1</a>) allowing to confirm that both clusters areensidered as homogeneous regions.-->-->
 
 
-[comment]: <> (<p align='center'><caption id='table01'><b> Table 1. Results of heterogeneity test for the two clusters obtained by the SOM. </b> </caption></p>)
+<!-- <p align enter'><caption id='table01'><b> Table 1. Results of heterogeneity test for the two clusters obtained by the SOM. </b> </caption></p>-->
 
-[comment]: <> (|Cluster	| Number of gauges	| Gauge stations	| Heterogeneity Measure H |)
-[comment]: <> (| :---: | :---: | --- | :---: |)
-[comment]: <> (| AR	| 33	| VER, BOM, BOT, BUE, CHI, CUM, PAR, PEÑ, GCH, GMT, HID, IMU, JUN, GCA, UNI, MAM, NAR, OBO, PIS, PUE, RBB, RMO, SAM, SBO, SAN, TAM, TAN, TGA, CRU, ASL, AAN, APO, VER.	| -0.86 |)
-[comment]: <> (| PR	| 11	| BAR, MIR, CHA, MAT, MOS, REM, SAL, JOS, MAG, GYA, COC	| 0.21 |)
+<!-- |Cluster	| Number of gauges	| Gauge stations	| Heterogeneity Measure H |-->
+<!-- | :---: | :---: | --- | :---: |-->
+<!-- | AR	| 33	| VER, BOM, BOT, BUE, CHI, CUM, PAR, PEÑ, GCH, GMT, HID, IMU, JUN, GCA, UNI, MAM, NAR, OBO, PIS, PUE, RBB, RMO, SAM, SBO, SAN, TAM, TAN, TGA, CRU, ASL, AAN, APO, VER.	| -0.86 |-->
+<!-- | PR	| 11	| BAR, MIR, CHA, MAT, MOS, REM, SAL, JOS, MAG, GYA, COC	| 0.21 |-->
 
 Finally, the results were validated verifying the geographic coherence of the location of the 44 gauge stations in the department of Nariño, as shown in <a href='RegionalizationResult'>Fig. 10</a>. The spatial location makes it possible to verify that the 33 gauge stations of the AR are located over the mountain range (Colombian massif) and that the 11 gauge stations of PR are located over the Nariño coast (Colombian Chocó biogeographic).
 <p align='center'><img id='RegionalizationResult' src='/figures/RegionalizationResult.png' style='width:600px'></p>
