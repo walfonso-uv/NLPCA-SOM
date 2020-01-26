@@ -36,14 +36,14 @@ The validation of the regions identified in the cluster analysis with NLPCA and 
 ## MatLab Files
 Follow the next instructions to get similar results as we present in [Paper].
 
-### Requirements
+### Requirements.m
 First, run <a href='Requirements.m'><b>Requirements.m</b></a> to check if your MatLab version is compatible to run scripts and functions. Verify using this script or doing the next checklist:
 - [x] MatLab realease 2015b
 - [x] Neural Network Toolbox
 
-If you run the script a message dialog will appear to inform if your version is compatible or not (Check flag value, if this is zero then the Main_Script.m will not work).
+If you run the script a message dialog will appear to inform if your version is compatible or not (Check flag value, if this is zero then the <a href='Main_Script.m'><b>Main_Script.m</b></a> will not work).
 
-### Main_Script
+### Main_Script.m
 This is the main script where, it is possible to reply the results from the manuscript [Paper]. Click <a href='Main_Script.m'>here</a> to check the full script.
 We develop an autoenconder using a network with a [408-200-25-5] topology. Were 408 is the number of inputs (series time for each gauge station), after is reduced layer by layer until it achieves only five outputs. The main idea is verify that per each training stage the performance is well reduced to thrust in the model.
 If you execute step by step the <a href='Main_Script.m'><b>Main_Script.m</b></a> some views are presented in <a href='#enc01'>Fig. 5</a>, <a href='#enc02'>Fig. 6</a>, and <a href='#enc03'>Fig. 7</a>.
