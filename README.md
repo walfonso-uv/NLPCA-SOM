@@ -7,6 +7,7 @@ This **GitHub** is part of the article titled: **"Regionalization of monthly rai
 ## Abstract
 
 The knowledge of rainfall regimes is a prerequisite necessary for many activities such as water resources management, mitigation of risks, planning of socioeconomic activities, and other hydrologic applications. In this paper, non-linear principal component analysis (NLPCA) and self-organized feature map (SOM), as non-linear techniques, are applied to identify the homogenous regions for monthly rainfall in the southwestern of Colombia. SOM uses data from a network of 44 monthly rainfall gauge stations represent in five principal components using NLPCA. The components represent the dimension reduction in the period from January of 1983 to December of 2016 into five principal components for each gauge station. The two-dimensional SOM indicates that two clusters grouped all rainfall gauges. A heterogeneity test showed that the two regions are acceptably homogeneous and depict the main features of the monthly rainfall variability over the study area. Besides, both identified clusters show two types of rainfall regimes: bimodal in the Andean Region and unimodal in the Pacific Region. The bimodal predominates in the mountainous area and the unimodal over the coastal zone. The application of SOM provided a better understanding of the seasonality and spatiality of rainfall.
+
 The advantages of NLPCA and SOM are three points:
 -    The application of NLPCA allows the reduction of dimensions and extraction of the main features of rainfall datasets.
 -    SOM is an artificial neural network useful for the classification and identification of homogeneous climate zones.
@@ -18,7 +19,7 @@ The dataset of monthly rainfall used in this study was obtained from 44-gauge st
 <p align='center'><caption><b> Figure 1. Geographic location of the study area and distribution of rainfall stations</b> </caption></p>
 
 ## Method
-The methodology proposed in this study was developed according to the flowchart presented in <a href='#Method'>Fig. 2</a>. The regionalization of monthly rainfall was performed using two nonlinear techniques: NLPCA and SOM. NLPCA was used to reduce the dimensionality of the dataset, and SOM to identify regions with homogeneous rainfall.
+The methodology proposed in this study was developed according to the flowchart presented in <a href='#Method'>Fig. 2</a>. The regionalization of monthly rainfall was performed using two non-linear techniques: NLPCA and SOM. NLPCA was used to reduce the dimensionality of the dataset, and SOM to identify regions with homogeneous rainfall.
 <p align='center'><img id='Method' src='figures/Methodology.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 2. Flowchart of methodology</b> </caption></p>
 
@@ -29,7 +30,7 @@ NLPCA operates by training a feed-forward neural network to perform the identity
 In this study, the input data were 44-gauge stations with temporal series of 408 months (34 years), NLPCA was used to reduce the temporal dimensionality of the dataset to five non-linear components using a network with a [408-200-25-5] topology. 
 
 ### Self-Organizing Map (SOM) 
-Five non-linear coefficients were estimated to represent the dimension reduction in the period from January of 1983 to December of 2016 for each gauge station, and this was used as inputs of SOM to capture a profile of the homogeneous areas and to obtain a classification of the gauge stations. SOM approximates the probability density function of the input data by an unsupervised learning algorithm, with properties of neighborhood preservation and local resolution of the input space proportional to the data distribution [[4](#4), [5](#5)].  The algorithm allows the clustering, visualization, and abstraction of complex data. SOM is composed of two layers: an input layer formed by a set of nodes, and an output layer composite by nodes ordered in a two-dimensional grid (<a href = '#som'>Fig. 4</a>) [[6]](#6). Each node in the input layer is joined to all the nodes in the output layer by synaptic links. Each output node has a weight vector W (connection intensity) associated with the input data, which establishes a relationship between the feature vector and the cluster of feature vectors [[7]](#7). In this study, the input values of SOM are the five non-linear principal components obtained in the NLPCA, and the output layer, with a total of 25 neurons (grid of 5x5 cells) to provide improved visualization.
+Five non-linear coefficients were estimated to represent the dimension reduction in the period from January of 1983 to December of 2016 for each gauge station, and this was used as inputs of SOM to capture a profile of the homogeneous areas and to obtain a classification of the gauge stations. SOM approximates the probability density function of the input data by an unsupervised learning algorithm, with properties of neighborhood preservation and local resolution of the input space proportional to the data distribution [[4](#4), [5](#5)].  The algorithm allows the clustering, visualization, and abstraction of complex data. SOM is composed of two layers: an input layer formed by a set of nodes, and an output layer composite by nodes ordered in a two-dimensional grid (<a href = '#som'>Fig. 4</a>) [[6]](#6). Each node in the input layer is joined to all the nodes in the output layer by synaptic links. Each output node has a weight vector W (connection intensity) associated with the input data, which establishes a relationship between the feature vector and the cluster of feature vectors [[7]](#7). In this study, the input values of SOM are the five non-linear principal components obtained in the NLPCA, and the output layer, with a total of 25 nodes (grid of 5x5 cells) to provide improved visualization.
 <p align='center'><img id='som' src='figures/SOM.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 4. SOM two-level architecture</b> </caption></p>
 
@@ -86,7 +87,7 @@ Finally, the results were validated verifying the geographic coherence of the lo
 
 <a id ='3'>[3]</a> M. A. Kramer. "Non-linear principal component analysis using auto-associative neural networks." AIChE Journal, vol. 37, pp. 233-243, 1991. [https://doi.org/10.1002/aic.690370209](https://doi.org/10.1002/aic.690370209)
 
-<a id='4'>[4]</a> T. Kohonen. "Self-Organizing Maps." Information Sciences. Berlin: Springer, vol. 30, 2001.
+<a id='4'>[4]</a> T. Kohonen. "Self-Organizing Maps." Information Sciences. Berlin: Springer, vol. 30, pp. XX-502, 2001. [https://doi.org/10.1007/978-3-642-56927-2](https://doi.org/10.1007/978-3-642-56927-2)
 
 <a id='5'>[5]</a> T. Kohonen. "Self-organized formation of topologically correct feature maps." Biological cybernetics, vol. 43, pp. 59-69, 1982. [https://doi.org/10.1007/BF00337288](https://doi.org/10.1007/BF00337288)
 
