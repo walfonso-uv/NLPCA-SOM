@@ -2,7 +2,7 @@
 Clustering using Self-Organizing Maps through Non-Linear Principal Components Analysis - Rainfalls in Southwestern Colombia.
 
 This **GitHub** is part of the article titled: **"Regionalization of monthly rainfall in southwestern Colombia using neural networks"** (See [[1]](#1)). In case to use these code, please refer as:
-- Canchala, Teresita; Carvajal-Escobar, Yesid; Alfonso-Morales, Wilfredo; Loaiza, Wilmar; Caicedo, Eduardo; Regionalization of monthly rainfall in southwestern Colombia using neural networks. MethodsX. 2020.
+- Canchala, Teresita; Carvajal-Escobar, Yesid; Alfonso-Morales, Wilfredo; Loaiza, Wilmar; and Caicedo, Eduardo; Regionalization of monthly rainfall in southwestern Colombia using neural networks. MethodsX. 2020.
 
 ## Abstract
 
