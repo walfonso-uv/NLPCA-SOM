@@ -51,20 +51,20 @@ If you run the script a message dialog will appear to inform if your version is 
 This is the main script where, it is possible to reply the results from the manuscript [[1]](#1). Click <a href='Main_Script.m'>here</a> to check the full script.
 We develop an autoencoder using a network with a [408-200-25-5] topology. Where 408 is the number of inputs (series time for each gauge station) after the inputs are reduced layer by layer until it achieves only five outputs. The main idea is verifying that per each training stage, the performance improves to thrust in the model.
 If you execute step by step the <a href='Main_Script.m'><b>Main_Script.m</b></a> some views are presented in <a href='#enc01'>Fig. 5</a>, <a href='#enc02'>Fig. 6</a>, and <a href='#enc03'>Fig. 7</a>.
-<p align='center'><img id='enc01' src='/figures/Encode01.png' style='width:600px'></p>
+<p align='center'><img id='enc01' src='figures/Encode01.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 5. First stage to train an autoenconder [408-200-408] </b> </caption></p>
-<p align='center'><img id='enc02' src='/figures/Encode02.png' style='width:600px'></p>
+<p align='center'><img id='enc02' src='figures/Encode02.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 6. Second stage to train an autoenconder [200-25-200] </b> </caption></p>
-<p align='center'><img id='enc03' src='/figures/Encode03.png' style='width:600px'></p>
+<p align='center'><img id='enc03' src='figures/Encode03.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 7. Third stage to train an autoenconder [25-5-25] </b> </caption></p>
 When all encoders are trained, then they are stacked in just one architecture, which is used to generate five non-linear principal components. These are finally used to create a Self-Organizing Map (SOM) to verify if these components represent well defined clusters for the classification of monthly rainfall in southwestern Colombia. One of the possible results after generating several SOM training is presented in <a href='#fullenc'>Fig. 8</a>.
-<p align='center'><img id='fullenc' src='/figures/FullEncoder.png' style='width:600px'></p>
+<p align='center'><img id='fullenc' src='figures/FullEncoder.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 8. Encoder [408-200-25-5] </b> </caption></p>
 The script also include a function called <a href='SOM_ClusterDefinition.m'><b>SOM_ClusterDefinition.m</b></a> to draw the result of the SOM with different colors if clusters are found. Threshold value defines how split neurons based on the intra-cluster distance; if inactive neurons are found between groups of active neurons, and they help to define an isolated group then a cluster could be defined.
 
 ### Paper_Result.m
 <a href='Paper_Result.m'><b>Paper_Result.m</b></a> calls the values saved to show in [[1]](#1). It calls the trained data from **example** folder; data are the result from NLPCA training using [408-200-25-5] encoder topology. <a href='#result'>Fig. 9</a> shows the results from trained data.
-<p align='center'><img id='result' src='/figures/PaperResult.png' style='width:600px'></p>
+<p align='center'><img id='result' src='figures/PaperResult.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 9. Classification result based on saved information </b> </caption></p>
 <!--- To demonstrate whether proposed regions in the cluster analysis can be accepted as homogeneous features, a heterogeneity test developed by Hosking and Wallis [44] was used. The results of heterogeneity tests show that AR and PR are "acceptably homogeneous", with <img src="https://render.githubusercontent.com/render/math?math=H < 1"> (see <a href='#table01'>Table 1</a>) allowing to confirm that both clusters areensidered as homogeneous regions.-->
 
@@ -77,7 +77,7 @@ The script also include a function called <a href='SOM_ClusterDefinition.m'><b>S
 <!-- | PR    | 11    | BAR, MIR, CHA, MAT, MOS, REM, SAL, JOS, MAG, GYA, COC    | 0.21 |-->
 
 Finally, the results were validated verifying the geographic coherence of the location of the 44 gauge stations in the department of Nariño, as shown in <a href='RegionalizationResult'>Fig. 10</a>. The spatial location makes it possible to verify that the 33 gauge stations of the AR are located over the mountain range (Colombian massif) and that the 11 gauge stations of PR are located over the Nariño coast (Colombian Chocó biogeographic).
-<p align='center'><img id='RegionalizationResult' src='/figures/RegionalizationResult.png' style='width:600px'></p>
+<p align='center'><img id='RegionalizationResult' src='figures/RegionalizationResult.png' style='width:600px'></p>
 <p align='center'><caption><b> Figure 10. Regionalization of monthly rainfall in Nariño using CPNL and SOM </b> </caption></p>
 
 ## References
